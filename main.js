@@ -96,5 +96,3 @@ let updateCircle = function () {
 };
 
 updateCircle();
-
-console.log(getDistance(my_circle1.xpos, my_circle1.ypos, my_circle2.xpos, my_circle2.ypos));
