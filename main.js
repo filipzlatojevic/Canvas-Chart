@@ -1,24 +1,25 @@
 import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import robot from "/robot.svg";
-import { setupCounter } from "./counter.js";
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${robot}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
+const canvas = document.querySelector("#canvas");
 
-setupCounter(document.querySelector("#counter"));
+let context = canvas.getContext("2d");
+
+canvas.style.background = "#ffffff";
+
+var window_height = window.innerHeight;
+var window_width = window.innerWidth;
+
+canvas.width = window_width;
+canvas.height = window_height;
+
+context.fillRect(300, 0, 100, 100);
+
+context.fillStyle = "red";
+context.fillRect(100, 500, 100, 100);
+
+context.beginPath();
+context.strokeStyle = "blue";
+context.lineWidth = 20;
+context.arc(100, 100, 50, 0, Math.PI * 2, false);
+context.stroke();
+context.closePath();
