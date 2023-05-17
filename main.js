@@ -9,7 +9,7 @@ var window_width = window.innerWidth;
 // /** @type {CanvasRenderingContext2D} */
 canvas.width = window_width;
 canvas.height = window_height;
-canvas.style.background = "#ff8";
+canvas.style.background = "orange";
 
 class Circle {
   constructor(xpos, ypos, radius, color) {
