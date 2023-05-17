@@ -9,8 +9,8 @@ canvas.style.background = "#ffffff";
 var window_height = window.innerHeight;
 var window_width = window.innerWidth;
 
-canvas.width = window_width;
-canvas.height = window_height;
+canvas.width = window_width - 100;
+canvas.height = window_height - 100;
 
 context.fillRect(300, 0, 100, 100);
 
