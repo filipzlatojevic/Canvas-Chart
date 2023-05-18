@@ -64,7 +64,9 @@ class Circle {
 }
 
 let getDistance = function (xpos1, ypos1, xpos2, ypos2) {
-  var result = Math.sqrt(Math.pow(xpos2 - xpos1, 2) + Math.pow(ypos2 - ypos1, 2));
+  var result = Math.sqrt(
+    Math.pow(xpos2 - xpos1, 2) + Math.pow(ypos2 - ypos1, 2)
+  );
   return result;
 };
 
@@ -81,14 +83,24 @@ let updateCircle = function () {
   my_circle2.update();
 
   if (
-    getDistance(my_circle1.xpos, my_circle1.ypos, my_circle2.xpos, my_circle2.ypos) <
+    getDistance(
+      my_circle1.xpos,
+      my_circle1.ypos,
+      my_circle2.xpos,
+      my_circle2.ypos
+    ) <
     my_circle2.radius + my_circle1.radius
   ) {
     my_circle2.color = 'red';
   }
 
   if (
-    getDistance(my_circle1.xpos, my_circle1.ypos, my_circle2.xpos, my_circle2.ypos) >=
+    getDistance(
+      my_circle1.xpos,
+      my_circle1.ypos,
+      my_circle2.xpos,
+      my_circle2.ypos
+    ) >=
     my_circle2.radius + my_circle1.radius
   ) {
     my_circle2.color = 'black';
